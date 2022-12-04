@@ -1,0 +1,12 @@
+# Ignore everything
+/*
+
+# Except these files & folders
+!/src
+!/public/toggle-theme.js
+!/.github
+!tsconfig.json
+!astro.config.mjs
+!package.json
+!.prettierrc
+!.eslintrc.json
