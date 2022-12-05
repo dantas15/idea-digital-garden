@@ -22,8 +22,10 @@ const socialImageURL = new URL(
   Astro.url.origin
 );
 
-const isDev = process.env.NODE_ENV === "development";
-const toggleThemePath = isDev ? "/toggle-theme.js" : "/garden/toggle-theme.js";
+const toggleThemePath =
+  process.env.NODE_ENV === "development"
+    ? "/toggle-theme.js"
+    : "/garden/toggle-theme.js";
 ---
 
 <!DOCTYPE html>

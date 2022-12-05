@@ -6,10 +6,13 @@ import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 
+const baseIfThereIsOne =
+  process.env.NODE_ENV === "development" ? undefined : "/garden";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://ist4.github.com",
-  // base: "/garden",
+  base: baseIfThereIsOne,
   integrations: [
     tailwind({
       config: {
