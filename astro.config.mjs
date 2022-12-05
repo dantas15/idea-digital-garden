@@ -10,7 +10,7 @@ const isDev = process.env.NODE_ENV === "development";
 // https://astro.build/config
 export default defineConfig({
   site: isDev ? "https://ist4.github.com" : "https://ist4.github.com/garden",
-  // base: "/garden",
+  base: isDev ? undefined : "/garden",
   integrations: [
     tailwind({
       config: {
