@@ -21,6 +21,10 @@ const socialImageURL = new URL(
   ogImage ? ogImage : SITE.ogImage,
   Astro.url.origin
 );
+
+// // const  = Astro.url;
+
+// console.log(Astro.url);
 ---
 
 <!DOCTYPE html>
@@ -28,7 +32,7 @@ const socialImageURL = new URL(
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/garden/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
@@ -67,7 +71,7 @@ const socialImageURL = new URL(
       onload="this.onload=null;this.rel='stylesheet'"
     />
 
-    <script is:inline src="/garden/toggle-theme.js"></script>
+    <script is:inline src="/toggle-theme.js"></script>
   </head>
   <body>
     <slot />
