@@ -16,11 +16,16 @@ const {
   disabled = false,
   target = "_self",
 } = Astro.props;
+
+const isDev = process.env.NODE_ENV === "development";
+const prodPath = isDev ? "" : "/garden/";
+
+const actualHref = `${prodPath}${href}`;
 ---
 
 <a
   type="button"
-  href={disabled ? "#" : href}
+  href={disabled ? "#" : actualHref}
   tabindex={disabled ? "-1" : "0"}
   class={`group ${className}`}
   aria-label={ariaLabel}

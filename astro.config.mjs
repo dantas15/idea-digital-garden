@@ -6,6 +6,7 @@ import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
 
 const isDev = process.env.NODE_ENV === "development";
+const test = isDev ? undefined : "/garden";
 
 // https://astro.build/config
 export default defineConfig({
