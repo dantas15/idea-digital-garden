@@ -9,6 +9,7 @@ import getSortedPosts from "@utils/getSortedPosts";
 import slugify from "@utils/slugify";
 import type { Frontmatter } from "src/types";
 import Socials from "@components/Socials.astro";
+import getActualHref from "@utils/getActualHref";
 
 const posts = await Astro.glob<Frontmatter>("../contents/**/*.mdx");
 
@@ -25,7 +26,7 @@ const featuredPosts = sortedPosts.filter(
       <h1>ist4</h1>
       <a
         target="_blank"
-        href="/rss.xml"
+        href={getActualHref("/rss.xml")}
         class="rss-link"
         aria-label="rss feed"
         title="RSS Feed"
