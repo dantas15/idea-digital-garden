@@ -41,7 +41,7 @@ const featuredPosts = sortedPosts.filter(
 
       <p>Welcome to my personal website.</p>
       <div class="social-wrapper">
-        <div class="social-links">Social Links:</div>
+        <div class="social-links">social links:</div>
         <Socials />
       </div>
     </section>
@@ -52,7 +52,7 @@ const featuredPosts = sortedPosts.filter(
       featuredPosts.length > 0 && (
         <>
           <section id="featured">
-            <h2>Featured</h2>
+            <h2>featured</h2>
             <ul>
               {featuredPosts.map(({ frontmatter }) => (
                 <Card
@@ -69,7 +69,7 @@ const featuredPosts = sortedPosts.filter(
     }
 
     <section id="recent-posts">
-      <h2>Recent Posts</h2>
+      <h2>recent posts</h2>
       <ul>
         {
           sortedPosts.map(

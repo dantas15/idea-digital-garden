@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: "About"
+title: "about"
 ---
 
 My name is Gustavo, I'm a Computer Science Student based in **Brazil**.
