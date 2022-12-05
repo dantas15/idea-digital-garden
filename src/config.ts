@@ -5,7 +5,7 @@ export const SITE = {
   author: "Gustavo Dantas Galote",
   desc: "ist4's digital garden. I write about software development, productivity and mental health",
   title: "ist4's digital garden",
-  ogImage: "default-og.png",
+  ogImage: "/garden/default-og.png",
   lightAndDarkMode: true,
   postPerPage: 3,
 };
