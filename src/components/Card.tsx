@@ -1,5 +1,6 @@
 import Datetime from "./Datetime";
 import type { Frontmatter } from "src/types";
+import getActualHref from "@utils/getActualHref";
 
 export interface Props {
   href?: string;
@@ -14,14 +15,10 @@ const styles = {
   titleHeading: "font-medium text-lg decoration-dashed hover:underline",
 };
 
-const isDev = process.env.NODE_ENV === "development";
-
 export default function Card({ href, post, secHeading = true }: Props) {
-  const actualHref = !href ? "#" : isDev ? href : `/garden/${href}`;
-
   return (
     <li className={styles.cardContainer}>
-      <a href={actualHref} className={styles.titleLink}>
+      <a href={getActualHref(href)} className={styles.titleLink}>
         {secHeading ? (
           <h2 className={styles.titleHeading}>{post.title}</h2>
         ) : (

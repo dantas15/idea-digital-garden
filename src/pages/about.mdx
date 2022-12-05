@@ -3,13 +3,15 @@ layout: ../layouts/AboutLayout.astro
 title: "about"
 ---
 
+import getActualHref from "@utils/getActualHref";
+
 My name is Gustavo, I'm a Computer Science Student based in **Brazil**.
 
 <div>
-  <img src="/garden/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
+  <img
+    src={getActualHref("/assets/dev.svg")}
+    class="sm:w-1/2 mx-auto"
+    alt="coding dev illustration"
+  />
 </div>
- 
- ## Tech stack
-  - Astro
-  - Tailwind CSS
-  - React
+## Tech stack - Astro - Tailwind CSS - React
