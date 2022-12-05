@@ -1,10 +1,10 @@
 import type { SocialObject } from "./types";
 
 export const SITE = {
-  website: "https://ist4.github.io/",
+  website: "https://ist4.github.io/garden",
   author: "Gustavo Dantas Galote",
   desc: "ist4's digital garden. I write about software development, productivity and mental health",
-  title: "ist4's blog",
+  title: "ist4's digital garden",
   ogImage: "default-og.png",
   lightAndDarkMode: true,
   postPerPage: 3,

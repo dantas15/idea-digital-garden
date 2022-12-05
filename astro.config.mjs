@@ -7,7 +7,8 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://ist4.github.io/",
+  site: "https://ist4.github.io/garden",
+  // base: "",
   integrations: [
     tailwind({
       config: {
@@ -28,7 +29,7 @@ export default defineConfig({
       ],
     ],
     shikiConfig: {
-      theme: "one-dark-pro",
+      theme: "dracula",
       wrap: true,
     },
     extendDefaultPlugins: true,

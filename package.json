@@ -1,6 +1,5 @@
 {
-  "name": "ist4.github.io",
-  "version": "1.2.1",
+  "name": "garden",
   "private": false,
   "scripts": {
     "dev": "astro dev",
