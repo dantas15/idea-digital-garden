@@ -22,9 +22,8 @@ const socialImageURL = new URL(
   Astro.url.origin
 );
 
-// // const  = Astro.url;
-
-// console.log(Astro.url);
+const isDev = process.env.NODE_ENV === "development";
+const toggleThemePath = isDev ? "/toggle-theme.js" : "/garden/toggle-theme.js";
 ---
 
 <!DOCTYPE html>
@@ -71,7 +70,7 @@ const socialImageURL = new URL(
       onload="this.onload=null;this.rel='stylesheet'"
     />
 
-    <script is:inline src="/toggle-theme.js"></script>
+    <script is:inline src={toggleThemePath}></script>
   </head>
   <body>
     <slot />
