@@ -2,12 +2,13 @@
 import getActualHref from "@utils/getActualHref";
 
 export interface Props {
-  href: string;
   className?: string;
   ariaLabel?: string;
   title?: string;
   disabled?: boolean;
   target?: "_blank" | "_self" | "_parent" | "_top";
+  href?: string;
+  forcedHref?: string;
 }
 
 const {
@@ -17,12 +18,19 @@ const {
   title,
   disabled = false,
   target = "_self",
+  forcedHref,
 } = Astro.props;
+
+const actualHref = forcedHref
+  ? forcedHref
+  : !disabled
+  ? getActualHref(href)
+  : undefined;
 ---
 
 <a
   type="button"
-  href={getActualHref(!disabled ? href : undefined)}
+  href={actualHref}
   tabindex={disabled ? "-1" : "0"}
   class={`group ${className}`}
   aria-label={ariaLabel}
