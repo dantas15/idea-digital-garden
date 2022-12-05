@@ -9,7 +9,7 @@ const { href, className, ...props } = Astro.props;
 
 const isDev = process.env.NODE_ENV === "development";
 
-const actualHref = !href ? "#" : isDev ? href : `/garden/${href}`;
+const actualHref = !href ? "#" : isDev ? href : `/garden${href}`;
 ---
 
 <a {...props} href={actualHref} class={className}>
