@@ -1,6 +1,7 @@
 ---
 import { LOGO_IMAGE, SITE } from "src/config";
 import Hr from "./Hr.astro";
+import Link from "./Link.astro";
 import LinkButton from "./LinkButton.astro";
 
 import logoPNG from "/assets/logo.png";
@@ -13,10 +14,10 @@ const { activeNav } = Astro.props;
 ---
 
 <header>
-  <a id="skip-to-content" href="#main-content">Skip to content</a>
+  <Link id="skip-to-content" href="#main-content">Skip to content</Link>
   <div class="nav-container">
     <div class="top-nav-wrap">
-      <a href="/" class="logo">
+      <Link href="/" className="logo">
         {
           LOGO_IMAGE.enable ? (
             <img
@@ -29,7 +30,7 @@ const { activeNav } = Astro.props;
             SITE.title
           )
         }
-      </a>
+      </Link>
       <button class="hamburger-menu" aria-label="menu">
         <div class="icon-container flex">
           <div id="first-line"></div>
@@ -41,16 +42,18 @@ const { activeNav } = Astro.props;
     <nav class="display-none sm:flex">
       <ul>
         <li>
-          <a href="/posts" class={activeNav === "posts" ? "active" : ""}
-            >posts</a
+          <Link href="/posts" className={activeNav === "posts" ? "active" : ""}
+            >posts</Link
           >
         </li>
         <li>
-          <a href="/tags" class={activeNav === "tags" ? "active" : ""}>tags</a>
+          <Link href="/tags" className={activeNav === "tags" ? "active" : ""}
+            >tags</Link
+          >
         </li>
         <li>
-          <a href="/about" class={activeNav === "about" ? "active" : ""}
-            >about</a
+          <Link href="/about" className={activeNav === "about" ? "active" : ""}
+            >about</Link
           >
         </li>
       </ul>

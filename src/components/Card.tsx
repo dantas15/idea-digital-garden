@@ -14,10 +14,14 @@ const styles = {
   titleHeading: "font-medium text-lg decoration-dashed hover:underline",
 };
 
+const isDev = process.env.NODE_ENV === "development";
+
 export default function Card({ href, post, secHeading = true }: Props) {
+  const actualHref = !href ? "#" : isDev ? href : `/garden/${href}`;
+
   return (
     <li className={styles.cardContainer}>
-      <a href={href} className={styles.titleLink}>
+      <a href={actualHref} className={styles.titleLink}>
         {secHeading ? (
           <h2 className={styles.titleHeading}>{post.title}</h2>
         ) : (

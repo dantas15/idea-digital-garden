@@ -1,0 +1,17 @@
+---
+import type { HTMLProps } from "react";
+
+export interface Props extends HTMLProps<HTMLLinkElement> {
+  role?: any; // prevent typescript error
+}
+
+const { href, className, ...props } = Astro.props;
+
+const isDev = process.env.NODE_ENV === "development";
+
+const actualHref = !href ? "#" : isDev ? href : `/garden/${href}`;
+---
+
+<a {...props} href={actualHref} class={className}>
+  <slot />
+</a>
