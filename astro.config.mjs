@@ -12,6 +12,7 @@ const test = isDev ? undefined : "/garden";
 export default defineConfig({
   site: isDev ? "https://ist4.github.com" : "https://ist4.github.com/garden",
   base: isDev ? undefined : "/garden",
+  publicDir: "./public",
   integrations: [
     tailwind({
       config: {
