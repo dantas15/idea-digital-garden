@@ -23,6 +23,20 @@ export default defineConfig({
     sitemap(),
     mdx({
       drafts: true,
+      remarkPlugins: [
+        remarkToc,
+        [
+          remarkCollapse,
+          {
+            test: "Table of contents",
+          },
+        ],
+      ],
+      shikiConfig: {
+        theme: "dracula",
+        wrap: true,
+      },
+      extendDefaultPlugins: true,
     }),
   ],
 });
