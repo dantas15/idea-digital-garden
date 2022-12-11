@@ -40,14 +40,17 @@ const featuredPosts = sortedPosts.filter(
         </svg>
       </a>
 
-      <p>Welcome to my personal website.</p>
-      <div class="social-wrapper">
+      <p>
+        welcome to my <a href={getActualHref("/posts/digital-garden")}
+          >digital garden</a
+        >.
+      </p>
+
+      <!-- <div class="social-wrapper">
         <div class="social-links">social links:</div>
         <Socials />
-      </div>
+      </div> -->
     </section>
-
-    <Hr />
 
     {
       featuredPosts.length > 0 && (
